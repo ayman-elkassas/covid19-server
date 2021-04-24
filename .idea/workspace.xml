@@ -25,6 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde87834-5bff-46ae-95d6-4fbdf28a450e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/media/Users/avatar/1619290401.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619279219637</updated>
       <workItem from="1619279227556" duration="165000" />
-      <workItem from="1619279449028" duration="9543000" />
+      <workItem from="1619279449028" duration="10722000" />
     </task>
     <servers />
   </component>
