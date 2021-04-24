@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-namespace App\Models;
-use User;
+use App\Model\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    return User::findById(1);
+    return User::get()->all();
 });
