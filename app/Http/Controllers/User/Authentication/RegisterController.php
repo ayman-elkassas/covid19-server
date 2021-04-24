@@ -28,7 +28,7 @@ class RegisterController extends Controller
                  $img=Image::make($request->avatar)->resize(350,350);
                  $upload_path="/Users/avatar/";
                  //todo:after make link (php artisan storage:link) save as following
-                 Storage::disk("public_upload")->put("/media/".$upload_path.$name, (string) $img->encode(), 'public');
+                 Storage::disk("public_upload")->put("/media/".$upload_path.$name, (string) $img->encode());
              }
 
             //todo:create new object
