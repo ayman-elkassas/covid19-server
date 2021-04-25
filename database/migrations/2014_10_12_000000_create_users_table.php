@@ -22,8 +22,13 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('avatar')->nullable();
             $table->string('phone')->nullable();
-            $table->string('skills')->nullable();
-            $table->string('fields_follow')->nullable();
+
+            $table->integer('parent_id')->unsigned()->nullable();
+
+            $table->foreign('parent_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
+
             $table->rememberToken();
             $table->timestamps();
         });

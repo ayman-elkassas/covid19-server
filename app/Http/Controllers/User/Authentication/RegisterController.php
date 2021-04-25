@@ -28,8 +28,7 @@ class RegisterController extends Controller
                  $img=Image::make($request->avatar)->resize(350,350);
                  $upload_path="/Users/avatar/";
                  //todo:after make link (php artisan storage:link) save as following
-                 move_uploaded_file($img->encode(),public_path().'upload'."/media/".$upload_path.$name);
-//                 Storage::disk("public_upload")->put("/media/".$upload_path.$name, (string) $img->encode());
+                 Storage::disk("public")->put($upload_path.$name, (string) $img->encode(), 'public');
              }
 
             //todo:create new object
@@ -39,8 +38,6 @@ class RegisterController extends Controller
             $user->lname=ucwords(strtolower($request->lname));
             $user->email=$request->email;
             $user->phone=$request->phone;
-            $user->skills="";
-            $user->fields_follow="";
             $user->password=bcrypt($request->get('password'));
             $user->avatar="/Users/avatar/".$name;
             $user->save();

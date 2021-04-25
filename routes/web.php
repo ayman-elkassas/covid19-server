@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\User;
 use App\Http\Controllers\User\Authentication\RegisterController;
 use App\Http\Controllers\User\Authentication\CurrentUserController;
 use App\Http\Controllers\User\Authentication\LoginController;
@@ -33,6 +32,11 @@ Route::group(['prefix'=>'api/auth','namespace'=>'User\Authentication'],function 
             Route::get('/user',[CurrentUserController::class,'index']);
             Route::get('/logout',[CurrentUserController::class,'logout']);
         });
+});
 
+//TODO:Posts CRUD
+Route::group(['prefix' => 'user-post'], function () {
+
+    Route::resource('/posts', User\Timeline\PostController::class);
 
 });

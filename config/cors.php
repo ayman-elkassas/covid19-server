@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    //todo:determine path of route '*' this will be all routes support CORS
+    'paths' => ['*'],
 
     'allowed_methods' => ['*'],
 
