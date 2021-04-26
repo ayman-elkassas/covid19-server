@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\Authentication\RegisterController;
 use App\Http\Controllers\User\Authentication\CurrentUserController;
 use App\Http\Controllers\User\Authentication\LoginController;
+use \App\Http\Controllers\User\Timeline\NormalPostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,5 +39,16 @@ Route::group(['prefix'=>'api/auth','namespace'=>'User\Authentication'],function 
 Route::group(['prefix' => 'user-post'], function () {
 
     Route::resource('/posts', User\Timeline\PostController::class);
+    Route::resource('/story', User\Timeline\PrivateSituations::class);
+    Route::get('/getAllPostByUserId/{id}', [NormalPostController::class,'getAllPostByUserId']);
 
+});
+
+//TODO:Story CRUD
+Route::group(['prefix' => 'user-story'], function () {
+    Route::resource('/story', User\Timeline\PrivateSituations::class);
+});
+
+Route::group(['prefix' => 'user'], function () {
+    Route::resource('/all-users', UserController::class);
 });
