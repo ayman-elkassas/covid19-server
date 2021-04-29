@@ -20,17 +20,17 @@ class RegisterController extends Controller
         try {
 
             //todo:Avatar
-             if($request->avatar!==""){
-                 //todo:Avatar
-                 $strpos=strpos($request->avatar,';');
-                 $sub=substr($request->avatar,0,$strpos);
-                 $ex=explode('/',$sub)[1];
-                 $name=time().'.'.$ex;
-                 $img=Image::make($request->avatar)->resize(350,350);
-                 $upload_path="/Users/avatar/";
-                 //todo:after make link (php artisan storage:link) save as following
-                 Storage::disk("public")->put($upload_path.$name, (string) $img->encode(), 'public');
-             }
+//             if($request->avatar!==""){
+//                 //todo:Avatar
+//                 $strpos=strpos($request->avatar,';');
+//                 $sub=substr($request->avatar,0,$strpos);
+//                 $ex=explode('/',$sub)[1];
+//                 $name=time().'.'.$ex;
+//                 $img=Image::make($request->avatar)->resize(350,350);
+//                 $upload_path="/Users/avatar/";
+//                 //todo:after make link (php artisan storage:link) save as following
+//                 Storage::disk("public")->put($upload_path.$name, (string) $img->encode(), 'public');
+//             }
 
             //todo:create new object
 
@@ -46,7 +46,8 @@ class RegisterController extends Controller
             $user->email=$request->email;
             $user->phone=$request->phone;
             $user->password=bcrypt($request->get('password'));
-            $user->avatar="/Users/avatar/".$name;
+//            "/Users/avatar/".$name;
+            $user->avatar="";
             $user->role=$request->role;
             $user->save();
 
