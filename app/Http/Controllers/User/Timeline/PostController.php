@@ -54,10 +54,15 @@ class PostController extends Controller
 
             $post->save();
 
-            $mimeType=explode("/",mime_content_type($request->get("postCover")))[0];
+            try {
+                $mimeType=explode("/",mime_content_type($request->get("postCover")))[0];
 
-            $arr=saveInStorage($request->get("postCover"),$mimeType,"/Users/post/cover/",$post->id);
-            $post->post_cover=$arr[1].$arr[0];
+                $arr=saveInStorage($request->get("postCover"),$mimeType,"/Users/post/cover/",$post->id);
+                $post->post_cover=$arr[1].$arr[0];
+            }catch (\Exception $ex){
+                $post->post_cover="";
+            }
+
             $post->save();
 
             return response()->json($post, 200);

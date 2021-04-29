@@ -32,7 +32,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde87834-5bff-46ae-95d6-4fbdf28a450e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PostController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +224,7 @@
       <workItem from="1619481810914" duration="10960000" />
       <workItem from="1619535650461" duration="32609000" />
       <workItem from="1619617458130" duration="50000" />
-      <workItem from="1619705847691" duration="14870000" />
+      <workItem from="1619705847691" duration="15314000" />
     </task>
     <servers />
   </component>
