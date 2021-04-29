@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Authentication;
 
 use App\Http\Controllers\Controller;
+use App\Models\Doctor;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -33,16 +34,28 @@ class RegisterController extends Controller
 
             //todo:create new object
 
-            $user=new User();
+            if($request->role===1){
+                $user=new User();
+            }
+            else{
+                $user=new Doctor();
+            }
+
             $user->fname=ucwords(strtolower($request->fname));
             $user->lname=ucwords(strtolower($request->lname));
             $user->email=$request->email;
             $user->phone=$request->phone;
             $user->password=bcrypt($request->get('password'));
             $user->avatar="/Users/avatar/".$name;
+            $user->role=$request->role;
             $user->save();
 
-            $token=JWTAuth::attempt($request->only('email','password'));
+            if($request->role==="2"){
+                $token=auth('web1')->attempt($request->only('email','password'));
+            }
+            else{
+                $token=JWTAuth::attempt($request->only('email','password'));
+            }
 
             return response()->json(['success'=>true,
                 'data'=>$user,'access_token'=>$token,'token_type'=>'bearer',

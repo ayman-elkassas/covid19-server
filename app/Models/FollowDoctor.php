@@ -5,11 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class FollowDoctor extends Model
 {
     use HasFactory;
-
-    public final function user():object {
-        return $this->belongsTo(User::class);
-    }
 }

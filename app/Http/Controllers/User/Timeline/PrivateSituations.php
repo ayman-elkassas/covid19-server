@@ -19,11 +19,12 @@ class PrivateSituations extends Controller
     {
         //
         try {
-            $blogs=PrivateSituation::with(["blogUser"])->get();
+            //error in relation
+            $blogs=PrivateSituation::with(["blogUser","blogDoctor"])->get();
 
             return response()->json($blogs, 200);
         }catch (\Exception $ex){
-            return response()->json("Error", 404);
+            return response()->json($ex, 404);
         }
     }
 
@@ -51,7 +52,13 @@ class PrivateSituations extends Controller
             $story=new PrivateSituation();
             $story->title=$request->get("title");
             $story->desc=$request->get("desc");
-            $story->user_id=$request->get("Uid");
+
+            if($request->get("role")===1){
+                $story->user_id=$request->get("Uid");
+            }
+            else if ($request->get("role")===2){
+                $story->doctor_id=$request->get("Uid");
+            }
 
             $story->save();
 

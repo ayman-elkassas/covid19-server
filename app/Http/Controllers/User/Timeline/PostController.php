@@ -38,15 +38,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        //
         try {
 
             $post=new Post();
             $post->title=$request->get("postTitle");
             $post->desc=$request->get("postDesc");
             $post->type=$request->get("postType");
-            $post->user_id=$request->get("Uid");
+
+            if($request->get("role")===1){
+                $post->user_id=$request->get("Uid");
+            }
+            else{
+                $post->doctor_id=$request->get("Uid");
+            }
 
             $post->save();
 
@@ -58,7 +62,7 @@ class PostController extends Controller
 
             return response()->json($post, 200);
         }catch (\Exception $ex){
-            return response()->json("Error", 404);
+            return response()->json($ex, 404);
         }
     }
 
@@ -71,6 +75,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -105,5 +110,12 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+        try {
+            Post::findOrFail($id)->delete();
+
+            return response()->json("Deleted Successfully", 200);
+        }catch (\Exception $ex){
+            return response()->json("Error", 404);
+        }
     }
 }

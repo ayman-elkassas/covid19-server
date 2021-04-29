@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Authentication;
 
 use App\Http\Controllers\Controller;
+use App\Models\Doctor;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,11 +24,11 @@ class LoginController extends Controller
         $this->jwt = $jwt;
 
         //todo:should change provider and then implement JWTSubject
-        Config::set('jwt.user', User::class);
-        Config::set('auth.providers', ['users' => [
-            'driver' => 'eloquent',
-            'model' => User::class,
-        ]]);
+//        Config::set('jwt.user', Doctor::class);
+//        Config::set('auth.providers', ['doctors' => [
+//            'driver' => 'eloquent',
+//            'model' => Doctor::class,
+//        ]]);
     }
 
     public final function DoLogin(Request $request)
@@ -35,15 +36,27 @@ class LoginController extends Controller
 
         $credential = $request->only('email', 'password');
 
-        if(!$token=JWTAuth::attempt($credential)){
+        if($request->role==="2"){
+            $token=auth('web1')->attempt($credential);
+            $user = auth('web1')->user();
+        }
+        else{
+            $token=JWTAuth::attempt($credential);
+            $user = JWTAuth::user();
+        }
+
+        if(!$token){
             return ['error'=>'invalid_credentials'];
         } else {
-            $user = JWTAuth::user();
-            $provider = "users";
+            try {
+                return response()->json(['success'=>true,
+                    'data'=>$user,'access_token'=>$token,'token_type'=>'bearer',
+                    'expire_in'=>config('jwt.ttl')], 200);
 
-            return response()->json(['success'=>true,
-                'data'=>$user,'access_token'=>$token,'token_type'=>'bearer',
-                'expire_in'=>config('jwt.ttl')], 200);
+            }catch (\Exception $ex){
+                return response()->json($ex, 404);
+            }
+
         }
     }
 }

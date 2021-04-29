@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePrivateSituationsTable extends Migration
+class CreateTreatmentReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,20 @@ class CreatePrivateSituationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('private_situations', function (Blueprint $table) {
+        Schema::create('treatment_reports', function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('title');
             $table->longText('desc');
-            //todo:type (text 1,image 2, video 3, audio 4)
+
+            $table->integer('doctor_id')->unsigned();//fk
             $table->integer('user_id')->unsigned();//fk
 
             //Relationships
+            $table->foreign('doctor_id')
+                ->references('id')->on('doctors')
+                ->onDelete('cascade');
+
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
@@ -37,6 +42,6 @@ class CreatePrivateSituationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('private_situations');
+        Schema::dropIfExists('treatment_reports');
     }
 }

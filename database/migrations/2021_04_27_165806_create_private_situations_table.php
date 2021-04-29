@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTreatmentReportsTable extends Migration
+class CreatePrivateSituationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreateTreatmentReportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('treatment_reports', function (Blueprint $table) {
+        Schema::create('private_situations', function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('title');
             $table->longText('desc');
-            $table->integer('doctor_id')->unsigned();
-
-            $table->integer('user_id')->unsigned();//fk
+            //todo:type (text 1,image 2, video 3, audio 4)
+            $table->integer('user_id')->unsigned()->nullable();//fk
+            $table->integer('doctor_id')->unsigned()->nullable();//fk
 
             //Relationships
-            $table->foreign('user_id')
-                ->references('id')->on('users')
+            $table->foreign('doctor_id')
+                ->references('id')->on('doctors')
                 ->onDelete('cascade');
 
             $table->timestamps();
@@ -38,6 +38,6 @@ class CreateTreatmentReportsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('treatment_reports');
+        Schema::dropIfExists('private_situations');
     }
 }

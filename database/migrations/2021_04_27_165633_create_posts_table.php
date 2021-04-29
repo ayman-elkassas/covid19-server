@@ -21,11 +21,16 @@ class CreatePostsTable extends Migration
             $table->string('post_cover')->nullable();
             //todo:type (text 1,image 2, video 3, audio 4)
             $table->integer('type')->unsigned();
-            $table->integer('user_id')->unsigned();//fk
+            $table->integer('user_id')->unsigned()->nullable();//fk
+            $table->integer('doctor_id')->unsigned()->nullable();//fk
 
             //Relationships
             $table->foreign('user_id')
                 ->references('id')->on('users')
+                ->onDelete('cascade');
+
+            $table->foreign('doctor_id')
+                ->references('id')->on('doctors')
                 ->onDelete('cascade');
 
             $table->timestamps();

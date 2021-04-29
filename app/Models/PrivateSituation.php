@@ -13,4 +13,9 @@ class PrivateSituation extends Model
         //todo: if does not put foreignKey null will return in your response
         return $this->belongsTo(User::class,'user_id');
     }
+
+    public final function blogDoctor():object {
+        //todo: if does not put foreignKey null will return in your response
+        return $this->belongsTo(Doctor::class,'doctor_id');
+    }
 }

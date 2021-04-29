@@ -32,13 +32,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde87834-5bff-46ae-95d6-4fbdf28a450e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/NormalPostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PrivateSituations.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NormalUserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/CurrentDoctorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Report/TreatmentReportController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/FollowDoctor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165506_create_doctors_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_170055_create_doctor_user_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/PublicInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/NormalPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/NormalPostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PrivateSituations.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PrivateSituations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/PrivateSituation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PrivateSituation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_213619_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165633_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_214154_create_public_infos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165719_create_public_infos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_214349_create_private_situations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165806_create_private_situations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_214606_create_treatment_reports_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165923_create_treatment_reports_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,17 +203,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\0_Client-Side\2-Covid19\Covid19\covid19-server\app\Http\Controllers\User\Timeline" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\0_Client-Side\2-Covid19\Covid19\covid19-server\app\Http" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\0_Client-Side\2-Covid19\Covid19\covid19-server\database\migrations" />
+      <recent name="E:\0_Client-Side\2-Covid19\Covid19\covid19-server\database\migrateArrange" />
+      <recent name="E:\0_Client-Side\2-Covid19\Covid19\covid19-server\app\Http\Controllers\User\Timeline" />
     </key>
   </component>
   <component name="RunManager">
@@ -219,7 +241,13 @@
       <workItem from="1619366301294" duration="141000" />
       <workItem from="1619366610916" duration="249000" />
       <workItem from="1619366954301" duration="826000" />
-      <workItem from="1619376213808" duration="8030000" />
+      <workItem from="1619376213808" duration="8464000" />
+      <workItem from="1619451190025" duration="4036000" />
+      <workItem from="1619464860765" duration="12533000" />
+      <workItem from="1619481810914" duration="10960000" />
+      <workItem from="1619535650461" duration="32609000" />
+      <workItem from="1619617458130" duration="50000" />
+      <workItem from="1619705847691" duration="13434000" />
     </task>
     <servers />
   </component>
@@ -258,17 +286,21 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1619300157790" />
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619397924614">
+    <state x="487" y="37" key="#com.intellij.ide.util.MemberChooser" timestamp="1619485838703">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1619397924614" />
+    <state x="487" y="37" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1619485838703" />
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619716655828">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="123" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1619716655828" />
     <state x="184" y="13" key="SettingsEditor" timestamp="1619279827763">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="13" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1619279827763" />
-    <state x="339" y="165" key="run.anything.popup" timestamp="1619378107358">
+    <state x="339" y="165" key="run.anything.popup" timestamp="1619635091307">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1619378107357" />
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1619635091307" />
   </component>
 </project>

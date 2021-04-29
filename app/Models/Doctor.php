@@ -2,22 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements JWTSubject
+class Doctor extends Authenticatable implements JWTSubject
 {
-    use Notifiable;
     use HasFactory;
+    use Notifiable;
 
-    protected $table='users';
+    protected $table='doctors';
     protected $primaryKey = 'id';
     //todo:should assign guard_name for spatie package
-     Protected $guard_name ='web';
+    Protected $guard_name ='web1';
 
     /**
      * The attributes that are mass assignable.
@@ -70,25 +68,25 @@ class User extends Authenticatable implements JWTSubject
 
     public function patients()
     {
-        return $this->belongsToMany(Doctor::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function reports()
     {
-        return $this->belongsToMany(Doctor::class,'treatment_reports')
+        return $this->belongsToMany(User::class,'treatment_reports')
             ->withPivot('title', 'desc')
             ->withTimestamps();
     }
 
-     public function getJWTIdentifier()
-     {
-         // TODO: Implement getJWTIdentifier() method.
-         return $this->getKey();
-     }
+    public function getJWTIdentifier()
+    {
+        // TODO: Implement getJWTIdentifier() method.
+        return $this->getKey();
+    }
 
-     public function getJWTCustomClaims()
-     {
-         // TODO: Implement getJWTCustomClaims() method.
-         return [];
-     }
+    public function getJWTCustomClaims()
+    {
+        // TODO: Implement getJWTCustomClaims() method.
+        return [];
+    }
 }
