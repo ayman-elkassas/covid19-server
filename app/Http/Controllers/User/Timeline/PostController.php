@@ -60,7 +60,7 @@ class PostController extends Controller
                 $arr=saveInStorage($request->get("postCover"),$mimeType,"/Users/post/cover/",$post->id);
                 $post->post_cover=$arr[1].$arr[0];
             }catch (\Exception $ex){
-                $post->post_cover="";
+                return response()->json($post, 200);
             }
 
             $post->save();
