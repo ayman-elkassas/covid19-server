@@ -32,32 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde87834-5bff-46ae-95d6-4fbdf28a450e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NormalUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/CurrentDoctorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Report/TreatmentReportController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Doctor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/FollowDoctor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165506_create_doctors_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_170055_create_doctor_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/PublicInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Authentication/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/NormalPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/NormalPostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PrivateSituations.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/Timeline/PrivateSituations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PrivateSituation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PrivateSituation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_213619_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165633_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_214154_create_public_infos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165719_create_public_infos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_214349_create_private_situations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165806_create_private_situations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_24_214606_create_treatment_reports_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_165923_create_treatment_reports_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +222,7 @@
       <workItem from="1619481810914" duration="10960000" />
       <workItem from="1619535650461" duration="32609000" />
       <workItem from="1619617458130" duration="50000" />
-      <workItem from="1619705847691" duration="13434000" />
+      <workItem from="1619705847691" duration="14672000" />
     </task>
     <servers />
   </component>
