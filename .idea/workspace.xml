@@ -31,7 +31,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde87834-5bff-46ae-95d6-4fbdf28a450e" name="Default Changelist" comment="" />
+    <list default="true" id="bde87834-5bff-46ae-95d6-4fbdf28a450e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,6 +225,7 @@
       <workItem from="1619535650461" duration="32609000" />
       <workItem from="1619617458130" duration="50000" />
       <workItem from="1619705847691" duration="16794000" />
+      <workItem from="1619752098625" duration="104000" />
     </task>
     <servers />
   </component>
