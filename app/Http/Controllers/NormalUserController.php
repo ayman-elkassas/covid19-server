@@ -16,7 +16,7 @@ class NormalUserController extends Controller
         try {
             $obj=json_decode($searchChar);
 
-            if($obj->role===2){
+            if($obj->role==='2'){
 
                 $users=DB::table("users")->where("fname",
                     "like",$obj->char.'%')
